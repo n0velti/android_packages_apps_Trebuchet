@@ -484,7 +484,7 @@ public class DeviceProfile {
         Rect padding = workspacePadding;
         if (isVerticalBarLayout()) {
             padding.top = 0;
-            padding.bottom = edgeMarginPx;
+            padding.bottom = 0;
             if (isSeascape()) {
                 padding.left = hotseatBarSizePx;
                 padding.right = verticalDragHandleSizePx;
@@ -507,13 +507,13 @@ public class DeviceProfile {
                         - (2 * inv.numRows * cellHeightPx) - hotseatBarTopPaddingPx
                         - hotseatBarBottomPaddingPx);
                 padding.set(availablePaddingX / 2, edgeMarginPx + availablePaddingY / 2,
-                        availablePaddingX / 2, paddingBottom + availablePaddingY / 2);
+                        availablePaddingX / 2, 0);
             } else {
                 // Pad the top and bottom of the workspace with search/hotseat bar sizes
                 padding.set(desiredWorkspaceLeftRightMarginPx,
                         edgeMarginPx,
                         desiredWorkspaceLeftRightMarginPx,
-                        paddingBottom);
+                        0);
             }
         }
     }
@@ -522,10 +522,10 @@ public class DeviceProfile {
         if (isVerticalBarLayout()) {
             if (isSeascape()) {
                 mHotseatPadding.set(mInsets.left + hotseatBarSidePaddingStartPx,
-                        mInsets.top, hotseatBarSidePaddingEndPx, mInsets.bottom);
+                        mInsets.top, hotseatBarSidePaddingEndPx, 0);
             } else {
                 mHotseatPadding.set(hotseatBarSidePaddingEndPx, mInsets.top,
-                        mInsets.right + hotseatBarSidePaddingStartPx, mInsets.bottom);
+                        mInsets.right + hotseatBarSidePaddingStartPx, 0);
             }
         } else {
 
@@ -540,7 +540,7 @@ public class DeviceProfile {
                     hotseatAdjustment + workspacePadding.left + cellLayoutPaddingLeftRightPx,
                     hotseatBarTopPaddingPx,
                     hotseatAdjustment + workspacePadding.right + cellLayoutPaddingLeftRightPx,
-                    hotseatBarBottomPaddingPx + mInsets.bottom + cellLayoutBottomPaddingPx);
+                    0);
         }
         return mHotseatPadding;
     }

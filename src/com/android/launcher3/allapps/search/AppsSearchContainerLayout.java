@@ -91,7 +91,7 @@ public class AppsSearchContainerLayout extends ExtendedEditText
         mSearchQueryBuilder = new SpannableStringBuilder();
         Selection.setSelection(mSearchQueryBuilder, 0);
 
-        mFixedTranslationY = Math.round(getTranslationY());
+        mFixedTranslationY = Math.round(getTranslationY() + 60);
         mMarginTopAdjusting = mFixedTranslationY - getPaddingTop();
 
         setHint(prefixTextWithIcon(getContext(), R.drawable.ic_allapps_search, getHint()));
@@ -131,7 +131,7 @@ public class AppsSearchContainerLayout extends ExtendedEditText
         int iconVisibleSize = Math.round(ICON_VISIBLE_AREA_FACTOR * dp.iconSizePx);
         int iconPadding = cellWidth - iconVisibleSize;
 
-        int myWidth = rowWidth - iconPadding + getPaddingLeft() + getPaddingRight();
+        int myWidth = rowWidth - iconPadding + getPaddingLeft() + getPaddingRight() - 200;
         super.onMeasure(makeMeasureSpec(myWidth, EXACTLY), heightMeasureSpec);
     }
 

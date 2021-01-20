@@ -94,7 +94,7 @@ public class Hotseat extends CellLayout implements LogContainerProvider, Insetta
         } else {
             lp.gravity = Gravity.BOTTOM;
             lp.width = ViewGroup.LayoutParams.MATCH_PARENT;
-            lp.height = grid.hotseatBarSizePx + insets.bottom;
+            lp.height = grid.hotseatBarSizePx;
         }
         Rect padding = grid.getHotseatLayoutPadding();
         setPadding(padding.left, padding.top, padding.right, padding.bottom);

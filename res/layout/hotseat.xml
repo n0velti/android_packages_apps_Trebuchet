@@ -21,4 +21,9 @@
     android:layout_height="match_parent"
     android:theme="@style/HomeScreenElementTheme"
     android:importantForAccessibility="no"
-    launcher:containerType="hotseat" />
+    launcher:containerType="hotseat"
+    android:background="@drawable/hotseat_bg_drawable"
+    android:layout_marginBottom="50dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+     />
