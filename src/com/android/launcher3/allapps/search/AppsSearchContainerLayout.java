@@ -91,7 +91,7 @@ public class AppsSearchContainerLayout extends ExtendedEditText
         mSearchQueryBuilder = new SpannableStringBuilder();
         Selection.setSelection(mSearchQueryBuilder, 0);
 
-        mFixedTranslationY = Math.round(getTranslationY() + 60);
+        mFixedTranslationY = Math.round(getTranslationY());
         mMarginTopAdjusting = mFixedTranslationY - getPaddingTop();
 
         setHint(prefixTextWithIcon(getContext(), R.drawable.ic_allapps_search, getHint()));
@@ -215,7 +215,7 @@ public class AppsSearchContainerLayout extends ExtendedEditText
     @Override
     public void setInsets(Rect insets) {
         MarginLayoutParams mlp = (MarginLayoutParams) getLayoutParams();
-        mlp.topMargin = Math.round(Math.max(-mFixedTranslationY, insets.top - mMarginTopAdjusting));
+        mlp.topMargin = Math.round(Math.max(-mFixedTranslationY, insets.top - mMarginTopAdjusting) + 100);
         requestLayout();
     }
 

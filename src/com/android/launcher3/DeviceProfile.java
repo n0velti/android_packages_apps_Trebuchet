@@ -484,7 +484,7 @@ public class DeviceProfile {
         Rect padding = workspacePadding;
         if (isVerticalBarLayout()) {
             padding.top = 0;
-            padding.bottom = 0;
+            padding.bottom = edgeMarginPx;
             if (isSeascape()) {
                 padding.left = hotseatBarSizePx;
                 padding.right = verticalDragHandleSizePx;
@@ -507,13 +507,13 @@ public class DeviceProfile {
                         - (2 * inv.numRows * cellHeightPx) - hotseatBarTopPaddingPx
                         - hotseatBarBottomPaddingPx);
                 padding.set(availablePaddingX / 2, edgeMarginPx + availablePaddingY / 2,
-                        availablePaddingX / 2, 0);
+                        availablePaddingX / 2, edgeMarginPx + availablePaddingY / 2);
             } else {
                 // Pad the top and bottom of the workspace with search/hotseat bar sizes
                 padding.set(desiredWorkspaceLeftRightMarginPx,
                         edgeMarginPx,
                         desiredWorkspaceLeftRightMarginPx,
-                        0);
+                        paddingBottom);
             }
         }
     }

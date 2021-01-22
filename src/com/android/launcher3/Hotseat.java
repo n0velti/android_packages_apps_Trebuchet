@@ -32,7 +32,10 @@ import com.android.launcher3.userevent.nano.LauncherLogProto;
 import com.android.launcher3.userevent.nano.LauncherLogProto.Target;
 import com.android.launcher3.views.Transposable;
 
+
+
 public class Hotseat extends CellLayout implements LogContainerProvider, Insettable, Transposable {
+
 
     @ViewDebug.ExportedProperty(category = "launcher")
     private boolean mHasVerticalHotseat;
@@ -43,10 +46,12 @@ public class Hotseat extends CellLayout implements LogContainerProvider, Insetta
 
     public Hotseat(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
+
     }
 
     public Hotseat(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
+
     }
 
     /* Get the orientation specific coordinates given an invariant order in the hotseat. */
@@ -71,6 +76,7 @@ public class Hotseat extends CellLayout implements LogContainerProvider, Insetta
 
     @Override
     public void fillInLogContainerData(View v, ItemInfo info, Target target, Target targetParent) {
+
         target.gridX = info.cellX;
         target.gridY = info.cellY;
         targetParent.containerType = LauncherLogProto.ContainerType.HOTSEAT;

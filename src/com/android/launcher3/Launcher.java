@@ -161,6 +161,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.function.Predicate;
 
+
 /**
  * Default launcher application.
  */
@@ -1104,6 +1105,8 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
             WidgetsFullSheet.show(this, false).restoreHierarchyState(widgetsState);
         }
     }
+
+
 
     /**
      * Finds all the views we need and configure them properly.
